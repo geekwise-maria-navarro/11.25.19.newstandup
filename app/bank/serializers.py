@@ -13,6 +13,7 @@ class Customer_Serializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Customer
         fields = [
+            'branch',
             'customer_first_name',
             'customer_last_name',
             'customer_email'
@@ -22,5 +23,6 @@ class Product_Serializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
         fields = [
+            'customer',
             'product_options'
         ]
